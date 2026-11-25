@@ -1,0 +1,11 @@
+{
+  "name": "mawid-booking",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mawid: bilingual (Arabic RTL / English) appointment booking and scheduling for salons, studios and clinics.",
+  "scripts": { "dev": "node server.mjs", "test": "node --test test/*.test.js", "e2e": "node e2e/run.mjs" },
+  "dependencies": { "@vercel/blob": "^2.9.0" },
+  "devDependencies": { "puppeteer-core": "^25.18.1" },
+  "license": "MIT"
+}
