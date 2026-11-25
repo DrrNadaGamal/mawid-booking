@@ -153,10 +153,10 @@ table.t tr[data-open]:hover td{background:#fbf6ec}
 .cal-in{display:grid;min-width:max-content}
 .cal-head{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:grid}
 .cal-head>div{padding:8px 8px;font-weight:800;border-inline-start:1px solid var(--line);display:flex;align-items:center;gap:8px;min-width:150px}
-.cal-head>div:first-child{min-width:54px;border:0}
+.cal-head>div:first-child{min-width:64px;border:0}
 .cal-body{display:grid;position:relative}
 .axis{position:relative}
-.axis span{position:absolute;inset-inline-end:6px;font-size:11.5px;color:var(--mute);font-weight:700;transform:translateY(-8px)}
+.axis span{white-space:nowrap;position:absolute;inset-inline-end:6px;font-size:11.5px;color:var(--mute);font-weight:700;transform:translateY(-8px)}
 .col{position:relative;border-inline-start:1px solid var(--line);min-width:150px;cursor:cell}
 .col .hl{position:absolute;inset-inline:0;border-top:1px solid #efe8da}
 .col .hl.h{border-top-color:#e0d6c3}

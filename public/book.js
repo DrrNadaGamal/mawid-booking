@@ -46,7 +46,7 @@ function render() {
   const bar = topbar();
   if (!d) { $('#root').innerHTML = bar + `<main class="wrap mt"><p class="banner bad">${esc(S.err || t('loading'))}</p></main>`; return; }
   document.body.style.setProperty('--b', d.color); document.title = loc(d) + ' | Mawid';
-  $('#root').innerHTML = bar + `<div class="bk-head"><div class="wrap"><h1>${esc(loc(d))}</h1><p>${esc(loc(d, 'tagline'))} · ${esc(loc(d, 'address'))}</p></div></div><main class="wrap bk-main">${S.done ? '' : stepsBar()}${S.offline ? `<p class="banner" style="margin-bottom:12px">${esc(t('offlineBook'))}</p>` : ''}<div class="${S.done ? '' : 'bk-grid'}"><section class="card">${body()}</section>${S.done ? '' : summary()}</div><p class="hint" style="text-align:center;margin-top:18px">${esc(t('demo'))}</p></main>`;
+  $('#root').innerHTML = bar + `<div class="bk-head"><div class="wrap"><h1>${esc(loc(d))}</h1><p>${esc(loc(d, 'tagline'))} · ${esc(loc(d, 'address'))}</p></div></div><main class="wrap bk-main">${S.done ? '' : stepsBar()}${S.offline ? `<p class="banner" style="margin-bottom:12px">${esc(t('offlineBook'))}</p>` : ''}<div class="${S.done || !S.svc ? '' : 'bk-grid'}"><section class="card">${body()}</section>${S.done ? '' : summary()}</div><p class="hint" style="text-align:center;margin-top:18px">${esc(t('demo'))}</p></main>`;
 }
 document.addEventListener('click', async (e) => {
   const c = e.target.closest('[data-svc],[data-staff],[data-day],[data-slot],[data-back],[data-next],[data-lang],[data-ics]'); if (!c) return;
